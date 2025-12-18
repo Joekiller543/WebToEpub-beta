@@ -1,0 +1,17 @@
+{
+  "name": "web-to-epub-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "start:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "dev": "concurrently \"npm run start:server\" \"npm run dev:client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
